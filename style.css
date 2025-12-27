@@ -1,0 +1,202 @@
+:root {
+    --primary-blue: #1e3a8a;
+    --neon-pink: #ff007f;
+    --dark-bg: #0b1120;
+    --card-bg: #1e293b;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.app-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+h1 span {
+    color: var(--neon-pink);
+    text-shadow: 0 0 15px var(--neon-pink);
+    margin-left: 10px;
+}
+
+/* Input Section */
+.input-container {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(30, 58, 138, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 550px;
+    margin: 0 auto;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(4px);
+}
+
+input, textarea {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 8px rgba(255, 0, 127, 0.3);
+}
+
+#add-note-btn {
+    background: var(--neon-pink);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#add-note-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px var(--neon-pink);
+}
+
+/* Notes Grid */
+#notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.note-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    border-top: 5px solid var(--neon-pink);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.note-card:hover {
+    transform: translateY(-5px);
+}
+
+.note-card h3 {
+    margin-top: 0;
+    color: var(--neon-pink);
+    padding-right: 20px;
+}
+
+.note-card p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+.delete-note {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.delete-note:hover {
+    color: #ff4d4d;
+}
+
+/* MODAL STYLES (The Scrolling Fix) */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    overflow-y: auto; /* Allows background to scroll if needed */
+}
+
+.modal-content {
+    background: var(--card-bg);
+    margin: 5vh auto;
+    padding: 30px;
+    border: 1px solid var(--neon-pink);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 700px;
+    color: white;
+    box-shadow: 0 0 40px rgba(255, 0, 127, 0.2);
+    max-height: 85vh; /* Prevents it from going off-screen */
+    overflow-y: auto; /* THE FIX: Adds internal scrolling */
+    position: relative;
+}
+
+/* Custom Neon Scrollbar */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--neon-pink);
+    border-radius: 10px;
+}
+
+.close-modal {
+    position: sticky;
+    top: 0;
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--neon-pink);
+    line-height: 1;
+}
+
+.modal-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 0, 127, 0.3);
+    margin: 15px 0;
+}
+
+#modal-body {
+    line-height: 1.8;
+    white-space: pre-wrap; /* Keeps your formatting */
+    word-wrap: break-word;
+}

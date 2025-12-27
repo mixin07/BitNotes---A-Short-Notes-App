@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitNotes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <header>
+            <h1>Bit<span>Notes</span></h1>
+            <div class="input-container">
+                <input type="text" id="note-title" placeholder="Title...">
+                <textarea id="note-text" placeholder="Write a note..."></textarea>
+                <button id="add-note-btn">Save Note</button>
+            </div>
+        </header>
+
+        <main id="notes-grid">
+            </main>
+    </div>
+
+    <div id="note-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title"></h2>
+            <hr class="modal-divider">
+            <p id="modal-body"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
