@@ -17,7 +17,7 @@ A sleek, neon-themed notes application built with pure **HTML**, **CSS**, and **
 
 * **Frontend:** HTML5, CSS3 (Custom variables, Flexbox, Grid)
 * **Scripting:** Vanilla JavaScript (ES6+)
-* **Deployment:** Netlify
+* **Deployment:** Vercel
 * **Storage:** Browser LocalStorage API
 
 ## 🛠️ Local Setup
