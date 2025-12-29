@@ -2,7 +2,7 @@
 
 A sleek, neon-themed notes application built with pure **HTML**, **CSS**, and **JavaScript**. **BitNotes** provides a fast and responsive way to jot down ideas, featuring local persistence and a modern glassmorphism UI.
 
-🚀 **Live Demo:** [https://bitnotes-ashortnotesapp.netlify.app/](https://bitnotes-ashortnotesapp.netlify.app/)
+🚀 **Live Demo:** https://bit-notes-a-short-notes-app.vercel.app/
 
 ## ✨ Features
 
